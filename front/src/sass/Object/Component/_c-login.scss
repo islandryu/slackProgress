@@ -1,0 +1,23 @@
+.c-login {
+  background: rgba($color: #00000052, $alpha: 0.4);
+  padding: 15px 30px;
+  width: 23vw;
+  height: 40vh;
+  text-align: center;
+  &__title {
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  &__button {
+    width: 200px;
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 100px);
+  }
+  &__input {
+    display: block;
+    width: calc(100% - 10px);
+    height: 30px;
+    margin-bottom: 20px;
+  }
+}

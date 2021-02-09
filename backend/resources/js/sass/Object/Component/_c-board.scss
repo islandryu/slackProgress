@@ -1,0 +1,15 @@
+.c-board {
+  text-align: center;
+  &__card {
+    min-height: 200px;
+    margin-bottom: 20px;
+  }
+  &__content {
+    padding: 40px;
+    background: #fff1d5;
+  }
+  &__title {
+    height: 30px;
+    font-weight: bold;
+  }
+}

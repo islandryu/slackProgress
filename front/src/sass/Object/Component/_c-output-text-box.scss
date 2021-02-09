@@ -1,0 +1,23 @@
+.c-output-text-box {
+  &__box {
+    background: #ffffff;
+    height: 100px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+  }
+  &__text {
+    display: block;
+  }
+  &__radio {
+    position: absolute;
+    right: 20px;
+  }
+  &__title {
+  }
+  &__button {
+    margin-top: 20px;
+    width: 100px;
+    margin-left: auto;
+  }
+}

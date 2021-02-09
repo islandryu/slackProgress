@@ -1,0 +1,13 @@
+.c-content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 320px 95%;
+  &__center {
+    grid-column: 2;
+    padding: 20px;
+    width: calc(100% - 300px);
+  }
+  &__side {
+    width: 300px;
+  }
+}

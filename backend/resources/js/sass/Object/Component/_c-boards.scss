@@ -1,0 +1,7 @@
+.c-boards {
+  display: flex;
+  justify-content: space-between;
+  &__board {
+    width: 30%;
+  }
+}

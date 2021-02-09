@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web: 
+    build: ./docker/web
+    image: nginx
+    ports:
+      - '80:80'
+    volumes:
+      - ./backend:/work/api
+      - ./front:/work/front
+    depends_on:
+      - app
+  app:
+    build: ./docker/php
+    volumes:
+      - ./backend:/work/api
+
+  db:
+    build: ./docker/db
+    ports:
+      - 3306:3306 
+  

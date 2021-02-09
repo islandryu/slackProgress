@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["DOM"],
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "lib",
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "./resources/js"
+  ],
+  "exclude": [
+    "./resources/js/__test__/*.test.ts"
+  ]
+}

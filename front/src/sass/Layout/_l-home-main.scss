@@ -1,0 +1,10 @@
+.l-home-main {
+  position: relative;
+  overflow: hidden;
+  &__img {
+    position: absolute;
+    top: calc(50% - 60vh);
+    left: -50vh;
+    height: 130vh;
+  }
+}

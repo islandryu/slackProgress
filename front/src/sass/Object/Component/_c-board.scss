@@ -1,0 +1,25 @@
+.c-board {
+  text-align: center;
+  &__card {
+    min-height: 200px;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__content {
+    padding: 20px;
+    background: #fff1d5;
+    overflow-y: scroll;
+    height: 50vh;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    position: relative;
+  }
+  &__title {
+    height: 30px;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,9 @@
+.c-sidebar {
+  background: rgba($color: #1313135c, $alpha: 0.5);
+  height: calc(100% - 105px);
+  padding: 10px;
+  position: fixed;
+  &__box {
+    margin-bottom: 10px;
+  }
+}
