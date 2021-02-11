@@ -14,6 +14,7 @@ services:
     build: ./docker/php
     volumes:
       - ./backend:/work/api
+      - ./front:/work/front
 
   db:
     build: ./docker/db
