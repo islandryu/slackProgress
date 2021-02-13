@@ -19,8 +19,8 @@ const OutputTextItem: FC<{ stateObj: State }> = ({ stateObj }) => {
             {outputText.text}
             <input
               type="radio"
-              name="hyouka"
-              value="good"
+              name={stateObj.name}
+              value={outputText.id}
               checked={stateObj.selectedOutputTextId === outputText.id}
               onChange={() =>
                 dispatch(

@@ -12,7 +12,7 @@ const SignUp: FC = () => {
   };
   return (
     <div className="c-login c-homebg__signup">
-      <h2 className="c-login__title">ログイン</h2>
+      <h2 className="c-login__title">サインアップ</h2>
       <input
         type="text"
         placeholder="名前"
