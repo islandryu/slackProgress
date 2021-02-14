@@ -2,8 +2,8 @@ import { Modal } from "@material-ui/core";
 import React, { FC, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import actions from "../action/actions";
-import Task from "../helper/task";
 import { CombinedState, State } from "../types";
+import closeBtn from "../images/close.svg";
 
 const NewOutputTextModal: FC = () => {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const NewOutputTextModal: FC = () => {
               dispatch(actions.closeNewOutputTextModal());
             }}
           >
-            <img src="./image/close.svg" alt="" className="c-closebtn__image" />
+            <img src={closeBtn} alt="" className="c-closebtn__image" />
           </div>
           <div className="c-modal-form c-modal-item__form">
             <input

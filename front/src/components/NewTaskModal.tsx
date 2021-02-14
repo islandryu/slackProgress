@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import actions from "../action/actions";
 import Task from "../helper/task";
 import { CombinedState } from "../types";
+import closeBtn from "../images/close.svg";
 
 const NewTaskModal: FC = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const NewTaskModal: FC = () => {
             dispatch(actions.closeNewTaskModal());
           }}
         >
-          <img src="./image/close.svg" alt="" className="c-closebtn__image" />
+          <img src={closeBtn} alt="" className="c-closebtn__image" />
         </div>
         <div className="c-modal-form c-modal-item__form">
           <input

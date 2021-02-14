@@ -13,7 +13,7 @@ const OutputTexts: FC = () => {
     <div className="c-sidebar c-content__side">
       {states.map((stateObj) => (
         <div className="c-output-text-box c-sidebar__box">
-          <h3 className="c-output-text-box__title">未処理</h3>
+          <h3 className="c-output-text-box__title">{stateObj.name}</h3>
           <OutputTextItem stateObj={stateObj} />
         </div>
       ))}

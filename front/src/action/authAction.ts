@@ -51,6 +51,7 @@ export const signupAsync = createAsync<SignupParam, unknown, unknown>(
     if (!res.ok) {
       throw Error;
     }
+    await dispatch(actions.setInitialValueAsync());
     dispatch(push("/manageTask"));
   }
 );
