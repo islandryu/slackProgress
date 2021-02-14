@@ -18,8 +18,19 @@
 実装予定
 （未実装・処理中・完了などの）state更新時にslackに通知させる。
 
-## backend
+## バックエンド
 laravel8 
 
 認証用ライブラリ
 Sunctom
+
+## インフラ
+docker以下
+### php
+phpの設定ファイルやDockerfile
+
+### db
+mysqlの設定ファイルやDockerfile等
+
+## web
+nginxの設定ファイルやDockerfile
