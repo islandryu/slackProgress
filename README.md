@@ -12,7 +12,7 @@
 - react-router(実装中)
 - react-notification-system(実装中)
 
-テストアカウント　test@gmail.com
+テストアカウント　test@example.com
 パスワード　pass
 
 実装予定
