@@ -1,5 +1,8 @@
 # slackProgress
 
+## 公開
+slackProgress.com
+
 ## フロントエンド
 
 主な使用パッケージ
