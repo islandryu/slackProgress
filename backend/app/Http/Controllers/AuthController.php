@@ -53,7 +53,7 @@ class AuthController extends Controller
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
-            'signup' => ''
+            'slack_url' => ''
         ]);
         $credentials = [
             'email' => $request['email'],
