@@ -20,47 +20,56 @@ const NewOutputTextModal: FC = () => {
   return (
     <Modal open={isOpen}>
       <>
-        <input
-          type="text"
-          value={outputText}
-          onChange={(e) => setOutputText(e.target.value)}
-          placeholder="タイトル"
-        />
-        <select
-          value={selectedStateId}
-          onChange={(e) => setSelectedStateId(Number(e.target.value))}
-        >
-          {states.map((state) => (
-            <option
-              key={state.id}
-              value={state.id}
-              selected={state.id === selectedStateId}
+        <div className="l-modal__content c-modal-item">
+          <h2 className="c-modal-item__title">新規テキスト</h2>
+          <div
+            className="c-modal-item__close c-closebtn"
+            data-testid="closeNewTaskModal"
+            onClick={() => {
+              dispatch(actions.closeNewOutputTextModal());
+            }}
+          >
+            <img src="./image/close.svg" alt="" className="c-closebtn__image" />
+          </div>
+          <div className="c-modal-form c-modal-item__form">
+            <input
+              type="text"
+              className="c-modal-form__text"
+              value={outputText}
+              onChange={(e) => setOutputText(e.target.value)}
+              placeholder="タイトル"
+            />
+            <select
+              className="c-modal-form__select"
+              value={selectedStateId}
+              onChange={(e) => setSelectedStateId(Number(e.target.value))}
             >
-              {state.name}
-            </option>
-          ))}
-        </select>
-        <button
-          data-testid="newTask"
-          onClick={() => {
-            dispatch(
-              actions.createOutputTextAsync({
-                outputText,
-                stateId: selectedStateId,
-              })
-            );
-          }}
-        >
-          作成
-        </button>
-        <button
-          data-testid="closeNewTaskModal"
-          onClick={() => {
-            dispatch(actions.closeNewOutputTextModal());
-          }}
-        >
-          閉じる
-        </button>
+              {states.map((state) => (
+                <option
+                  key={state.id}
+                  value={state.id}
+                  selected={state.id === selectedStateId}
+                >
+                  {state.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div
+            className="c-modal-item__button"
+            data-testid="newTask"
+            onClick={() => {
+              dispatch(
+                actions.createOutputTextAsync({
+                  outputText,
+                  stateId: selectedStateId,
+                })
+              );
+            }}
+          >
+            追加
+          </div>
+        </div>
       </>
     </Modal>
   );

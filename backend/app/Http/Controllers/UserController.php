@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Validator;
 
 
 class UserController extends Controller
@@ -96,5 +97,14 @@ class UserController extends Controller
     {
         //
         User::find($id)->delete;
+    }
+
+    public function setSlackUrl(Request $request, $id)
+    {
+        $validatedRequest = Validator::make([
+            'slack_url' => ['text' => 'url']
+        ]);
+        $user = User::find($id);
+        $user->update([]);
     }
 }

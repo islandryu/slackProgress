@@ -14,36 +14,41 @@ const NewTaskModal: FC = () => {
   const [detail, setDetail] = useState<string>("");
   return (
     <Modal open={isOpen}>
-      <>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="タイトル"
-        />
-        <input
-          type="textarea"
-          value={detail}
-          onChange={(e) => setDetail(e.target.value)}
-          placeholder="詳細"
-        />
-        <button
-          data-testid="newTask"
-          onClick={() => {
-            dispatch(actions.createTaskAsync(new Task(title, detail)));
-          }}
-        >
-          作成
-        </button>
-        <button
+      <div className="l-modal__content c-modal-item">
+        <h2 className="c-modal-item__title">新規タスク</h2>
+        <div
+          className="c-modal-item__close c-closebtn"
           data-testid="closeNewTaskModal"
           onClick={() => {
             dispatch(actions.closeNewTaskModal());
           }}
         >
-          閉じる
-        </button>
-      </>
+          <img src="./image/close.svg" alt="" className="c-closebtn__image" />
+        </div>
+        <div className="c-modal-form c-modal-item__form">
+          <input
+            type="text"
+            className="c-modal-form__text"
+            placeholder="タイトル"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <textarea
+            className="c-modal-form__textarea"
+            value={detail}
+            onChange={(e) => setDetail(e.target.value)}
+          ></textarea>
+        </div>
+        <div
+          className="c-modal-item__button"
+          data-testid="newTask"
+          onClick={() => {
+            dispatch(actions.createTaskAsync(new Task(title, detail)));
+          }}
+        >
+          追加
+        </div>
+      </div>
     </Modal>
   );
 };

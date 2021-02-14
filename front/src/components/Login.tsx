@@ -26,9 +26,9 @@ const Login: FC = () => {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-      <button className="c-login-button c-login__button"
-        onClick={submit} 
-      >ログイン</button>
+      <button className="c-login-button c-login__button" onClick={submit}>
+        ログイン
+      </button>
     </div>
   );
 };
