@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Route, Router, Switch } from "react-router-dom";
+import { Route, Router } from "react-router-dom";
 import Home from "./page/Home";
 import ManageTask from "./page/ManageTask";
 import { history } from "./store/store";
